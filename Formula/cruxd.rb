@@ -1,15 +1,16 @@
 class Cruxd < Formula
-  desc "cruxd is a container runtime for testing and fuzzing containerized applications."
+  desc "The Crucible daemon."
   homepage "https://github.com/cruciblehq/cruxd"
-  version "0.1.0"
+  version "0.1.1"
+  url "https://github.com/cruciblehq/cruxd/releases/download/v0.1.1/cruxd-linux-amd64.tar.gz"
+  sha256 "3bd1b7dc4f8811a52c850b3649a6cfc9993217122ffe4532455de8ac9daa6aec"
+
+  depends_on :linux
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/cruciblehq/cruxd/releases/download/v0.1.0/cruxd-linux-amd64.tar.gz"
-      sha256 "bf4b16d817e35fd6715073bd2c33b463e0023ba829d28371a17af542c028d32d"
-    elsif Hardware::CPU.arm?
-      url "https://github.com/cruciblehq/cruxd/releases/download/v0.1.0/cruxd-linux-arm64.tar.gz"
-      sha256 "683bc7823ee1e33bf77f5548b88eb3bc873d3b13d019c48f8c1135de7c8ee4af"
+    on_arm do
+      url "https://github.com/cruciblehq/cruxd/releases/download/v0.1.1/cruxd-linux-arm64.tar.gz"
+      sha256 "126070ee1ad17ff546acd98eccd39eaa1808dc6650645e237e9a659581f1bddb"
     end
   end
 
