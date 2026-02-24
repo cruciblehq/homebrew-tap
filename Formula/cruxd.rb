@@ -1,16 +1,16 @@
 class Cruxd < Formula
   desc "The Crucible daemon."
   homepage "https://github.com/cruciblehq/cruxd"
-  version "0.1.6"
-  url "https://github.com/cruciblehq/cruxd/releases/download/v0.1.6/cruxd-linux-amd64.tar.gz"
-  sha256 "1ff43a9f64f7ac55906c80f5925cf21046e5a6a1979dfd3e7cf2be33b6bf0978"
+  version "0.1.7"
+  url "https://github.com/cruciblehq/cruxd/releases/download/v0.1.7/cruxd-linux-amd64.tar.gz"
+  sha256 "a867cdb0fc957cf9ea39de846bb0ba11fc7a731b047d504af2f3bee7083a93e2"
 
   depends_on :linux
 
   on_linux do
     on_arm do
-      url "https://github.com/cruciblehq/cruxd/releases/download/v0.1.6/cruxd-linux-arm64.tar.gz"
-      sha256 "62c18d0bfde57f1a626326d6ed3f87eb88b0e8c947124d6cc4c7a349a0512a3d"
+      url "https://github.com/cruciblehq/cruxd/releases/download/v0.1.7/cruxd-linux-arm64.tar.gz"
+      sha256 "5c5c722cbb05df9ff456817594b70d33d26859855d77656c2d2e644ea7d190e7"
     end
   end
 
